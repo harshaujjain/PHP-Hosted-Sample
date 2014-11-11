@@ -19,7 +19,7 @@ $fields = array(
 	"orderRef" => "Test purchase",
 	"currencyCode" => 826,
 	"countryCode" => 826,
-	"redirectURL" => ($_SERVER['https'] == 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], 
+	"redirectURL" => ($_SERVER['HTTPS'] == 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], 
 );
 	
 
