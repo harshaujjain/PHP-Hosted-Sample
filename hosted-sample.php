@@ -1,4 +1,4 @@
-<?PHP 
+<?php 
 
 if (isset($_POST['responseCode'])) {
 	echo '<p><strong>Cardstream Response</strong></p>';
@@ -59,12 +59,12 @@ function createSignature(array $data, $key, $algo = null) {
 
 <form action="<?= $action ?>" method="post">
 	
-	<?	foreach ($fields as $key => $value) { ?>
+	<?php	foreach ($fields as $key => $value) { ?>
 			<input type="hidden" name="<?= $key ?>" value="<?= $value ?>">			
-	<?	}
+	<?php	}
 	
 		if (isset($sig_key)) { ?>
 			<input type="hidden" name="signature" value="<?= createSignature($fields, $sig_key, 'SHA512') ?>" />
-	<?	} ?>
+	<?php	} ?>
 	<input type="submit" value="Pay Now">
 </form>
